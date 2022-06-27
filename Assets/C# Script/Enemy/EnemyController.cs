@@ -2,12 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class scri : MonoBehaviour
+public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
+    private Rigidbody _controller;
+    [SerializeField] private float _speed;
     void Start()
     {
-        
+        _controller = GetComponent<Rigidbody>();
+
     }
 
     // Update is called once per frame

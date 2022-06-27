@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Scene : MonoBehaviour
 {
-    public GameObject backButton;
-    public GameObject mainMenu;
+    [SerializeField] private GameObject backButton;
+    [SerializeField] private GameObject mainMenu;
     private GameObject _menuCollection;
    public void ChangeScene(string sceneName)
     {

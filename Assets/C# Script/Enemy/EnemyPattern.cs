@@ -6,18 +6,10 @@ using UnityEngine.EventSystems;
 
 public class EnemyPattern : MonoBehaviour,IPointerClickHandler
 {
-    [SerializeField] private double _speed;
-    [SerializeField] private double _hp;
-    private Rigidbody _controller;
-    void Start()
-    {
-        _controller = GetComponent<Rigidbody>();
-        
-    }
-    private void FixedUpdate()
-    {
-        
-    }
+    
+    [SerializeField] private float _hp;
+    [SerializeField] private float _score;
+   
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
@@ -26,7 +18,13 @@ public class EnemyPattern : MonoBehaviour,IPointerClickHandler
     public void OnPointerClick(PointerEventData eventData)
     {
         _hp--;
-        if(_hp<=0) Destroy(gameObject);
+
+        if (_hp <= 0)
+        {
+            TextChanger.current.ChangeTextEnemy(-1);
+            TextChanger.current.ChangeTextScore(_score);
+            Destroy(gameObject);
+        }
     }
 }
 

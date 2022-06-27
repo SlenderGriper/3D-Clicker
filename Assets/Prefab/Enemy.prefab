@@ -127,3 +127,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   _speed: 0
   _hp: 1.5
+  _score: 8

@@ -11,6 +11,10 @@ PrefabInstance:
       propertyPath: _hp
       value: 2.5
       objectReference: {fileID: 0}
+    - target: {fileID: -7509430305143610172, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
+      propertyPath: _score
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 5439695861228769849, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
       propertyPath: m_Name
       value: Tank Variant

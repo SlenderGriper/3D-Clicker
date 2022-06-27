@@ -9,7 +9,7 @@
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
     <RootNamespace></RootNamespace>
-    <ProjectGuid>{B2B58FB2-4462-6B0C-A872-40DD957E5FE0}</ProjectGuid>
+    <ProjectGuid>{3945E898-8B9A-554B-54C0-1BD81772BA54}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <AssemblyName>Assembly-CSharp</AssemblyName>
@@ -58,9 +58,10 @@
   <ItemGroup>
     <Compile Include="Assets\C# Script\Enemy\EnemyCreator.cs" />
     <Compile Include="Assets\C# Script\Scene.cs" />
-    <Compile Include="Assets\C# Script\Enemy\EnemyPattern.cs" />
-    <Compile Include="Assets\scri.cs" />
     <Compile Include="Assets\C# Script\MoveCamera.cs" />
+    <Compile Include="Assets\C# Script\Enemy\EnemyPattern.cs" />
+    <Compile Include="Assets\C# Script\TextChanger.cs" />
+    <Compile Include="Assets\C# Script\Enemy\EnemyController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
