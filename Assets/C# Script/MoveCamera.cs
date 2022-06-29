@@ -10,7 +10,6 @@ public class MoveCamera : MonoBehaviour
     {
         if(Input.touchCount > 0){
             var touch = Input.GetTouch(0);
-            Debug.Log("sss");
             
             if (touch.phase == TouchPhase.Moved)
             {

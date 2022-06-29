@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<Scores xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+  <ScoreList>
+    <ScoreStorage>
+      <Score>1000</Score>
+      <Name>Pro</Name>
+    </ScoreStorage>
+    <ScoreStorage>
+      <Score>100</Score>
+      <Name>Noob</Name>
+    </ScoreStorage>
+    <ScoreStorage>
+      <Score>0</Score>
+      <Name>Player</Name>
+    </ScoreStorage>
+    <ScoreStorage>
+      <Score>0</Score>
+      <Name>Player</Name>
+    </ScoreStorage>
+    <ScoreStorage>
+      <Score>0</Score>
+      <Name>Player</Name>
+    </ScoreStorage>
+    <ScoreStorage>
+      <Score>0</Score>
+      <Name>Player</Name>
+    </ScoreStorage>
+  </ScoreList>
+</Scores>

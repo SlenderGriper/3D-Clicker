@@ -19,6 +19,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Tank Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 5439695861228769851, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
+      propertyPath: m_Drag
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5439695861228769853, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
@@ -66,6 +70,10 @@ PrefabInstance:
     - target: {fileID: 5439695861228769855, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5774064399998893811, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
+      propertyPath: _speed
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
