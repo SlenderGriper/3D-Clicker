@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Audio;
 using UnityEngine.EventSystems;
 
 
@@ -9,15 +10,18 @@ public class StatsChanger : MonoBehaviour,IPointerClickHandler
     
     [SerializeField] private float _hp;
     [SerializeField] private float _score;
-   
+    
+
     private void OnTriggerEnter(Collider other)
     {
         Destroy(gameObject);
+        
     }
 
     public void OnPointerClick(PointerEventData eventData)
     {
         _hp--;
+        GetComponent<SoundCreator>()?.Create();
         if (_hp <= 0)
         {
             Dead();

@@ -5,6 +5,7 @@ using UnityEngine.EventSystems;
 public class DeleteAllEnemy : MonoBehaviour, IPointerClickHandler
 {
     private Transform _enemyFather;
+    [SerializeField] private GameObject effect;
     private void Start()
     {
         _enemyFather = GetComponent<Transform>().parent.GetComponent<Transform>();
@@ -15,6 +16,8 @@ public class DeleteAllEnemy : MonoBehaviour, IPointerClickHandler
         {
             child.GetComponent<StatsChanger>()?.Dead();
         }
+        var effPositon=new Vector3(transform.position.x,transform.position.y,transform.position.z);
+        Instantiate(effect, effPositon, transform.rotation);
         Destroy(gameObject);
     }
 

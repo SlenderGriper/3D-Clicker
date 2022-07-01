@@ -7,6 +7,10 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -8905427676664266775, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
+      propertyPath: _sound
+      value: 
+      objectReference: {fileID: 8300000, guid: bac47422621ad6f4dad32c876494efce, type: 3}
     - target: {fileID: -7509430305143610172, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
       propertyPath: _hp
       value: 0.75
@@ -15,6 +19,14 @@ PrefabInstance:
       propertyPath: _score
       value: 8
       objectReference: {fileID: 0}
+    - target: {fileID: -7509430305143610172, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
+      propertyPath: _sound
+      value: 
+      objectReference: {fileID: 8300000, guid: bac47422621ad6f4dad32c876494efce, type: 3}
+    - target: {fileID: -5966627061545591405, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: bac47422621ad6f4dad32c876494efce, type: 3}
     - target: {fileID: 5439695861228769849, guid: 847ef8a6e67ec9f4cab999d7ec4bd8ff, type: 3}
       propertyPath: m_Name
       value: Fast Variant

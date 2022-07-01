@@ -30,7 +30,11 @@ public class Spawn : MonoBehaviour
         while (TextChanger.current.NeedMoreEnemy)
         {
             yield return new WaitForSeconds(_spawnSpeed);
-            if(_freezeSpawn) yield return new WaitForSeconds(_timeFreeze);
+            if (_freezeSpawn)
+            {
+                yield return new WaitForSeconds(_timeFreeze);
+                _freezeSpawn = false;
+            }
             Creator(out GameObject enemy,out Vector3 spawnLocated);
             TextChanger.current.ChangeTextEnemy(1);
 
@@ -57,6 +61,7 @@ public class Spawn : MonoBehaviour
         z = Random.Range(-2f, 2f);
         enemy = _enemyPrefab[i];
         spawnLocated = new Vector3(x, 0.5f, z);
+        GetComponent<WhereSpawn>()?.CheackToCreate(x);
     }
 
     private void PreparingEnemy(GameObject enemy)

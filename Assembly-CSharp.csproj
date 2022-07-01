@@ -57,19 +57,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\C# Script\Enemy\Spawn.cs" />
+    <Compile Include="Assets\C# Script\Booster\FreezeSpawnEnemy.cs" />
     <Compile Include="Assets\C# Script\UI\Scene.cs" />
     <Compile Include="Assets\C# Script\UI\WriteInUIScore.cs" />
     <Compile Include="Assets\C# Script\UI\Score.cs" />
     <Compile Include="Assets\C# Script\Enemy\IncreasingDifficulty.cs" />
+    <Compile Include="Assets\C# Script\UI\CloseButtonInFail.cs" />
     <Compile Include="Assets\C# Script\Booster\DeleteAllEnemy.cs" />
     <Compile Include="Assets\C# Script\MoveCamera.cs" />
     <Compile Include="Assets\C# Script\Enemy\StatsChanger.cs" />
     <Compile Include="Assets\C# Script\UI\TextChanger.cs" />
     <Compile Include="Assets\C# Script\UI\ScoreStorage.cs" />
-    <Compile Include="Assets\C# Script\Enemy\Move.cs" />
-    <Compile Include="Assets\C# Script\UI\CloseButtonInFail.cs" />
     <Compile Include="Assets\C# Script\Booster\Spawner.cs" />
-    <Compile Include="Assets\C# Script\Booster\FreezeSpawnEnemy.cs" />
+    <Compile Include="Assets\C# Script\Enemy\Move.cs" />
+    <Compile Include="Assets\C# Script\Audio.cs" />
+    <Compile Include="Assets\C# Script\Enemy\SoundCreator.cs" />
+    <Compile Include="Assets\C# Script\UI\WhereSpawn.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">
