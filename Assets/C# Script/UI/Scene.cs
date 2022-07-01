@@ -9,37 +9,62 @@ public class Scene : MonoBehaviour
     [SerializeField] private GameObject _mainMenu;
     [SerializeField] private GameObject _blurUI;
     [SerializeField] private GameObject _buttonToMenu;
-    private bool _isMenuClose = true;
+
     private GameObject _menuCollection;
 
     public void Exit()
     {
         Application.Quit();
     }
-
-    public void Menu() {
-        
-        Time.timeScale = _isMenuClose?0:1;
-        _blurUI.SetActive(_isMenuClose);
-        _mainMenu.SetActive(_isMenuClose);
-        _isMenuClose = !_isMenuClose;
-        Debug.Log(_isMenuClose);
+   public void DeathMenu()
+    {
+        MenuMeneger(true);
+        foreach (Transform child in _mainMenu.GetComponent<Transform>())
+        {
+            child.GetComponent<CloseButtonInFail>()?.Close();
+        }
     }
+    private void MenuMeneger(bool isMenuClose) {
+        
+        Time.timeScale = isMenuClose?0:1;
+        _blurUI.SetActive(isMenuClose);
+        _mainMenu.SetActive(isMenuClose);
+        _backButton.SetActive(!isMenuClose);
 
-
+    }
+    public void OpenMenu()
+    {
+        if (_menuCollection == null) MenuMeneger(true);
+        else CloseTab();
+    }
+    public void CloseMenu()
+    {
+         MenuMeneger(false);
+    }
+    public void Restart()
+    {
+        Time.timeScale = 1;
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
     public void OpenTab(GameObject menuCollection)
     {
         menuCollection.GetComponent<WriteInUIScore>()?.WriteInUI(GetComponent<Score>().CatchList);
         _menuCollection = menuCollection;
-        _menuCollection.SetActive(true);
-        _backButton.SetActive(true);
-        _mainMenu.SetActive(false);
+        TabMeneger(true);
+        
     }
-     public void ExitTab()
+
+    
+     private void CloseTab()
     {
-        _backButton.SetActive(false);
-        _menuCollection.SetActive(false);
-        _mainMenu.SetActive(true);
+        TabMeneger(false);
+        _menuCollection = null;
+    }
+    private void TabMeneger(bool isTabOpen)
+    {
+        _menuCollection.SetActive(isTabOpen);
+        _backButton.SetActive(isTabOpen);
+        _mainMenu.SetActive(!isTabOpen);
     }
 
 }
