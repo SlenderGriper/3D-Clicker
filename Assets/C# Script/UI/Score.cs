@@ -8,16 +8,18 @@ using System.IO;
 public class Score : MonoBehaviour
 {
     private Scores _storage=new Scores();
+    string path;
 
 
     private void Start()
     {
+        path = Application.persistentDataPath + "/Score.xml";
         ReadXML();
     }
     private void WriteXML()
     {
         XmlSerializer xml = new XmlSerializer(typeof(Scores));
-        using (FileStream fs = new FileStream("Score.xml", FileMode.OpenOrCreate))
+        using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
         {
            xml.Serialize(fs,_storage);
         }
@@ -25,9 +27,19 @@ public class Score : MonoBehaviour
     private void ReadXML()
     {
         XmlSerializer xml = new XmlSerializer(typeof(Scores));
-        using (FileStream fs = new FileStream("Score.xml", FileMode.OpenOrCreate))
+        
+        Debug.Log(path);
+        if(!File.Exists(path))
         {
-            _storage=(Scores)xml.Deserialize(fs);
+            Debug.Log(1);
+            _storage.ScoreList.Add(new ScoreStorage(2500, "Hacker"));
+            _storage.ScoreList.Add(new ScoreStorage(500, "Pro"));
+            _storage.ScoreList.Add(new ScoreStorage(100, "Noob"));
+        }
+        else using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
+        {
+                Debug.Log(2);
+                _storage =(Scores)xml.Deserialize(fs);
         }
         
     }
