@@ -7,9 +7,10 @@ public class SoundCreator : MonoBehaviour
     [SerializeField] private AudioClip _sound;
     [SerializeField] private GameObject _soundObject;
     [SerializeField] private float volume;
+    public static float SettingVolume=1;
     public void Create()
     {
         var playSound = Instantiate(_soundObject);
-        playSound.GetComponent<Audio>().StartAudio(_sound,volume);
+        playSound.GetComponent<Audio>().StartAudio(_sound,volume*SettingVolume);
     }
 }

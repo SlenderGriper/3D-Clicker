@@ -73,6 +73,7 @@
     <Compile Include="Assets\C# Script\UI\ScoreStorage.cs" />
     <Compile Include="Assets\C# Script\Booster\Spawner.cs" />
     <Compile Include="Assets\C# Script\Enemy\Move.cs" />
+    <Compile Include="Assets\C# Script\UI\SoundController.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="UnityEngine">

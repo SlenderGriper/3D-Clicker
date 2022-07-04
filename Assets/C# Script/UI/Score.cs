@@ -31,14 +31,12 @@ public class Score : MonoBehaviour
         Debug.Log(path);
         if(!File.Exists(path))
         {
-            Debug.Log(1);
             _storage.ScoreList.Add(new ScoreStorage(2500, "Hacker"));
             _storage.ScoreList.Add(new ScoreStorage(500, "Pro"));
             _storage.ScoreList.Add(new ScoreStorage(100, "Noob"));
         }
         else using (FileStream fs = new FileStream(path, FileMode.OpenOrCreate))
         {
-                Debug.Log(2);
                 _storage =(Scores)xml.Deserialize(fs);
         }
         
